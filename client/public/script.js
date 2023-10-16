@@ -61,24 +61,24 @@ function update() {
   const cursors = this.input.keyboard.createCursorKeys();
 
   if (cursors.left.isDown) {
-    player.setVelocityX(-160);
+    dragon.setVelocityX(-160);
   } else if (cursors.right.isDown) {
-    player.setVelocityX(160);
+    dragon.setVelocityX(160);
   } else {
-    player.setVelocityX(0);
+    dragon.setVelocityX(0);
   }
 
   if (cursors.space.isDown) {
-    shootFireball(player.x, player.y);
+    shootFireball(dragon.x, dragon.y);
   }
 }
 
 function shootFireball(x, y) {
-  const warrior = warriors.get(x, y);
+  const fireball = fireballs.get(x, y);
 
-  if (warrior) {
-    warrior.setActive(true);
-    warrior.setVisible(true);
-    warrior.setVelocityY(-300);
+  if (fireball) {
+    fireball.setActive(true);
+    fireball.setVisible(true);
+    fireball.setVelocityY(-300);
   }
 }
