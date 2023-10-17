@@ -4,8 +4,7 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
-import PushActionScript from "../script-nodes/PushActionScript";
+import PlatformPrefab from "./PlatformPrefab";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -21,20 +20,30 @@ export default class Level extends Phaser.Scene {
 
 	editorCreate(): void {
 
-		// fufuSuperDino
-		const fufuSuperDino = this.add.image(640, 257, "FufuSuperDino");
+		// sky
+		const sky = this.add.image(646, 363, "sky");
+		sky.scaleX = 1.6;
+		sky.scaleY = 1.2;
 
-		// onPointerDownScript
-		const onPointerDownScript = new OnPointerDownScript(fufuSuperDino);
+		// platform_Prefab
+		const platform_Prefab = new PlatformPrefab(this, 42, 364);
+		this.add.existing(platform_Prefab);
 
-		// pushAction
-		new PushActionScript(onPointerDownScript);
+		// platform_Prefab_1
+		const platform_Prefab_1 = new PlatformPrefab(this, 855, 500);
+		this.add.existing(platform_Prefab_1);
 
-		// text
-		const text = this.add.text(640, 458, "", {});
-		text.setOrigin(0.5, 0.5);
-		text.text = "Hellerskies";
-		text.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "3em" });
+		// platform_Prefab_2
+		const platform_Prefab_2 = new PlatformPrefab(this, 848, 203);
+		this.add.existing(platform_Prefab_2);
+
+		// platformPrefab
+		const platformPrefab = new PlatformPrefab(this, -49, 714);
+		this.add.existing(platformPrefab);
+		platformPrefab.scaleX = 4;
+		platformPrefab.scaleY = 1;
+		platformPrefab.tintTopLeft = 672009;
+		platformPrefab.tintTopRight = 672009;
 
 		this.events.emit("scene-awake");
 	}
