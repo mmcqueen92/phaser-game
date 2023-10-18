@@ -32,8 +32,9 @@
                 "y"
             ],
             "label": "platform_Prefab",
-            "x": 42,
-            "y": 364
+            "scope": "METHOD",
+            "x": 112,
+            "y": 436
         },
         {
             "prefabId": "8b6a5bfa-2a4f-4465-9672-09dec8c6ce13",
@@ -43,8 +44,9 @@
                 "y"
             ],
             "label": "platform_Prefab_1",
-            "x": 855,
-            "y": 500
+            "scope": "METHOD",
+            "x": 785,
+            "y": 544
         },
         {
             "prefabId": "8b6a5bfa-2a4f-4465-9672-09dec8c6ce13",
@@ -54,8 +56,9 @@
                 "y"
             ],
             "label": "platform_Prefab_2",
-            "x": 848,
-            "y": 203
+            "scope": "METHOD",
+            "x": 734,
+            "y": 277
         },
         {
             "prefabId": "8b6a5bfa-2a4f-4465-9672-09dec8c6ce13",
@@ -68,20 +71,182 @@
                 "tintTopLeft",
                 "tintTopRight"
             ],
-            "label": "platformPrefab",
-            "x": -49,
-            "y": 714,
+            "label": "bottomPlatform",
+            "scope": "METHOD",
+            "x": -55,
+            "y": 696,
             "scaleX": 4,
             "scaleY": 1,
             "tintTopLeft": "#0a4109",
             "tintTopRight": "#0a4109"
+        },
+        {
+            "prefabId": "3f29e87b-e6cf-4d5f-984a-4441b2180eea",
+            "id": "cdcab351-6da8-4d0d-9798-12248fbe7b43",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "CLASS",
+            "x": 457,
+            "y": 598
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "467dbf9a-570d-4330-bed0-e7ee84d7775a",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star",
+            "x": 179,
+            "y": -96
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "2fe832f6-ade9-4330-9c1f-3801c4b2d320",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_1",
+            "x": 312,
+            "y": -77
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "61b58a39-9995-4589-8939-1ee5705500df",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_3",
+            "x": 461.3751806729729,
+            "y": -94.71402015889419
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "fb666d4b-103d-45dc-8534-4e1653fdcd86",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_6",
+            "x": 782.9754111110631,
+            "y": -81.7636753090382
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "0e24e212-95bb-4fb7-83a2-500d18d809f8",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_7",
+            "x": 895.2117331431483,
+            "y": -81.7636753090382
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "74924bdc-f3f1-4c81-b3b7-aeed4d44bd95",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_8",
+            "x": 1007.4480551752334,
+            "y": -70.97172126749155
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "63be2de2-643d-4990-8bec-622369c7f8b5",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_9",
+            "x": 1126.1595496322466,
+            "y": -66.65493965087289
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "5ef5d64c-66b5-470f-8e24-944ab6680365",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_2",
+            "x": 823.9848364689403,
+            "y": 453.51724515167587
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "140686eb-3988-4b3d-abaf-5bc14b4b0a6b",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_4",
+            "x": 966.4386298173562,
+            "y": 382.29034847746794
+        },
+        {
+            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+            "id": "56e72bda-f349-449f-bda6-b465909466da",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "star_5",
+            "x": 1113.2092047823908,
+            "y": 434.0917278768919
         }
     ],
-    "plainObjects": [],
+    "plainObjects": [
+        {
+            "id": "a5f4b445-b8e7-4e72-971d-cf944b40e903",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "platforms"
+        },
+        {
+            "id": "3d1a5032-cf55-4d81-87c1-9d562d12dea8",
+            "type": "Keyboard.Key",
+            "label": "leftKey",
+            "keyCode": "LEFT"
+        },
+        {
+            "id": "200f194d-12fb-4979-b27a-078ed7ccaf39",
+            "type": "Keyboard.Key",
+            "label": "rightKey",
+            "keyCode": "RIGHT"
+        },
+        {
+            "id": "09496b8c-7570-4d67-90d2-6035304b80b0",
+            "type": "Keyboard.Key",
+            "label": "upKey",
+            "keyCode": "UP"
+        }
+    ],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 4
-    }
+    },
+    "lists": [
+        {
+            "id": "70243b4b-599d-422c-9828-d66194b1b121",
+            "label": "platforms",
+            "objectIds": [
+                "91074242-0e1e-41cc-b8c2-fb060f0186b5",
+                "a69a2f75-cfa7-4652-b05b-4b1da107bd78",
+                "637fa2ce-7489-40e7-a5b8-5f1d0949774a",
+                "89758b97-db8c-43d6-8530-10f7b09205c5"
+            ]
+        }
+    ]
 }
