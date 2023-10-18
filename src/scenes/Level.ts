@@ -61,51 +61,60 @@ export default class Level extends Phaser.Scene {
 		const player = new PlayerPrefab(this, 457, 598);
 		this.add.existing(player);
 
+		// starsLayer
+		const starsLayer = this.add.layer();
+
 		// star
 		const star = new StarPrefab(this, 179, -96);
-		this.add.existing(star);
+		starsLayer.add(star);
 
 		// star_1
 		const star_1 = new StarPrefab(this, 312, -77);
-		this.add.existing(star_1);
+		starsLayer.add(star_1);
 
 		// star_3
-		const star_3 = new StarPrefab(this, 461.3751806729729, -94.71402015889419);
-		this.add.existing(star_3);
+		const star_3 = new StarPrefab(this, 461.37518310546875, -94.71401977539062);
+		starsLayer.add(star_3);
 
 		// star_6
-		const star_6 = new StarPrefab(this, 782.9754111110631, -81.7636753090382);
-		this.add.existing(star_6);
+		const star_6 = new StarPrefab(this, 782.9754028320312, -81.763671875);
+		starsLayer.add(star_6);
 
 		// star_7
-		const star_7 = new StarPrefab(this, 895.2117331431483, -81.7636753090382);
-		this.add.existing(star_7);
+		const star_7 = new StarPrefab(this, 895.2117309570312, -81.763671875);
+		starsLayer.add(star_7);
 
 		// star_8
-		const star_8 = new StarPrefab(this, 1007.4480551752334, -70.97172126749155);
-		this.add.existing(star_8);
+		const star_8 = new StarPrefab(this, 1007.4480590820312, -70.97171783447266);
+		starsLayer.add(star_8);
 
 		// star_9
-		const star_9 = new StarPrefab(this, 1126.1595496322466, -66.65493965087289);
-		this.add.existing(star_9);
+		const star_9 = new StarPrefab(this, 1126.1595458984375, -66.65493774414062);
+		starsLayer.add(star_9);
 
 		// star_2
-		const star_2 = new StarPrefab(this, 823.9848364689403, 453.51724515167587);
-		this.add.existing(star_2);
+		const star_2 = new StarPrefab(this, 823.98486328125, 453.5172424316406);
+		starsLayer.add(star_2);
 
 		// star_4
-		const star_4 = new StarPrefab(this, 966.4386298173562, 382.29034847746794);
-		this.add.existing(star_4);
+		const star_4 = new StarPrefab(this, 966.4386596679688, 382.29034423828125);
+		starsLayer.add(star_4);
 
 		// star_5
-		const star_5 = new StarPrefab(this, 1113.2092047823908, 434.0917278768919);
-		this.add.existing(star_5);
+		const star_5 = new StarPrefab(this, 1113.209228515625, 434.09173583984375);
+		starsLayer.add(star_5);
 
 		// lists
 		const platforms = [bottomPlatform, platform_Prefab_2, platform_Prefab_1, platform_Prefab];
 
-		// collider
+		// player_platforms_collider
 		this.physics.add.collider(player, platforms);
+
+		// stars_platforms_collider
+		this.physics.add.collider(starsLayer.list, platforms);
+
+		// player_star_collider
+		this.physics.add.overlap(player, starsLayer.list, this.collectStar as any, undefined, this);
 
 		this.player = player;
 		this.leftKey = leftKey;
@@ -130,24 +139,27 @@ export default class Level extends Phaser.Scene {
 
 		this.editorCreate();
 
+	}
 
-
+	private collectStar(player: PlayerPrefab, star: StarPrefab) {
+		star.collected();
 	}
 
 	update() {
+		this.updatePlayer();
+	}
+
+	private updatePlayer() {
 		if (this.leftKey.isDown) {
-			this.player.setVelocityX(-160);
-			this.player.play(ANIM_LEFT, true);
+			this.player.moveLeft();
 		} else if (this.rightKey.isDown) {
-			this.player.setVelocityX(160);
-			this.player.play(ANIM_RIGHT, true)
+			this.player.moveRight();
 		} else {
-			this.player.setVelocityX(0);
-			this.player.play(ANIM_TURN);
+			this.player.stopMoving();
 		}
 
 		if (this.upKey.isDown && this.player.body.touching.down) {
-			this.player.setVelocityY(-330);
+			this.player.jump();
 		}
 	}
 

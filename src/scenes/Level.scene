@@ -93,121 +93,128 @@
             "y": 598
         },
         {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "467dbf9a-570d-4330-bed0-e7ee84d7775a",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star",
-            "x": 179,
-            "y": -96
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "2fe832f6-ade9-4330-9c1f-3801c4b2d320",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_1",
-            "x": 312,
-            "y": -77
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "61b58a39-9995-4589-8939-1ee5705500df",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_3",
-            "x": 461.3751806729729,
-            "y": -94.71402015889419
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "fb666d4b-103d-45dc-8534-4e1653fdcd86",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_6",
-            "x": 782.9754111110631,
-            "y": -81.7636753090382
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "0e24e212-95bb-4fb7-83a2-500d18d809f8",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_7",
-            "x": 895.2117331431483,
-            "y": -81.7636753090382
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "74924bdc-f3f1-4c81-b3b7-aeed4d44bd95",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_8",
-            "x": 1007.4480551752334,
-            "y": -70.97172126749155
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "63be2de2-643d-4990-8bec-622369c7f8b5",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_9",
-            "x": 1126.1595496322466,
-            "y": -66.65493965087289
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "5ef5d64c-66b5-470f-8e24-944ab6680365",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_2",
-            "x": 823.9848364689403,
-            "y": 453.51724515167587
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "140686eb-3988-4b3d-abaf-5bc14b4b0a6b",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_4",
-            "x": 966.4386298173562,
-            "y": 382.29034847746794
-        },
-        {
-            "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
-            "id": "56e72bda-f349-449f-bda6-b465909466da",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star_5",
-            "x": 1113.2092047823908,
-            "y": 434.0917278768919
+            "type": "Layer",
+            "id": "dd34ae06-81e7-475f-8529-178cd1209b39",
+            "label": "starsLayer",
+            "list": [
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "467dbf9a-570d-4330-bed0-e7ee84d7775a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star",
+                    "x": 179,
+                    "y": -96
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "2fe832f6-ade9-4330-9c1f-3801c4b2d320",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_1",
+                    "x": 312,
+                    "y": -77
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "61b58a39-9995-4589-8939-1ee5705500df",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_3",
+                    "x": 461.37518310546875,
+                    "y": -94.71401977539062
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "fb666d4b-103d-45dc-8534-4e1653fdcd86",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_6",
+                    "x": 782.9754028320312,
+                    "y": -81.763671875
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "0e24e212-95bb-4fb7-83a2-500d18d809f8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_7",
+                    "x": 895.2117309570312,
+                    "y": -81.763671875
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "74924bdc-f3f1-4c81-b3b7-aeed4d44bd95",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_8",
+                    "x": 1007.4480590820312,
+                    "y": -70.97171783447266
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "63be2de2-643d-4990-8bec-622369c7f8b5",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_9",
+                    "x": 1126.1595458984375,
+                    "y": -66.65493774414062
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "5ef5d64c-66b5-470f-8e24-944ab6680365",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_2",
+                    "x": 823.98486328125,
+                    "y": 453.5172424316406
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "140686eb-3988-4b3d-abaf-5bc14b4b0a6b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_4",
+                    "x": 966.4386596679688,
+                    "y": 382.29034423828125
+                },
+                {
+                    "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
+                    "id": "56e72bda-f349-449f-bda6-b465909466da",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_5",
+                    "x": 1113.209228515625,
+                    "y": 434.09173583984375
+                }
+            ]
         }
     ],
     "plainObjects": [
         {
             "id": "a5f4b445-b8e7-4e72-971d-cf944b40e903",
             "type": "Collider",
-            "label": "collider",
+            "label": "player_platforms_collider",
             "scope": "LOCAL",
             "object1": "player",
             "object2": "platforms"
@@ -229,6 +236,25 @@
             "type": "Keyboard.Key",
             "label": "upKey",
             "keyCode": "UP"
+        },
+        {
+            "id": "1b2cc2f9-7a9a-48bd-8f3b-e4027eef73e6",
+            "type": "Collider",
+            "label": "stars_platforms_collider",
+            "scope": "LOCAL",
+            "object1": "starsLayer.list",
+            "object2": "platforms"
+        },
+        {
+            "id": "09b43301-8943-4b3d-b5b6-e9788ae71913",
+            "type": "Collider",
+            "label": "player_star_collider",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "starsLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.collectStar as any",
+            "callbackContext": "this"
         }
     ],
     "meta": {

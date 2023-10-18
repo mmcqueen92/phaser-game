@@ -21,13 +21,15 @@ export default class StarPrefab extends Phaser.Physics.Arcade.Image {
 		this.body.setSize(24, 22, false);
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+		this.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
-	// Write your code here.
+	collected() {
+		this.disableBody(true, true);
+	}
 
 	/* END-USER-CODE */
 }
