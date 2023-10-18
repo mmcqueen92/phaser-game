@@ -7,8 +7,9 @@ import Phaser from "phaser";
 import PlatformPrefab from "./PlatformPrefab";
 import PlayerPrefab from "./PlayerPrefab";
 import StarPrefab from "./StarPrefab";
+import ScorePrefab from "./ScorePrefab";
 /* START-USER-IMPORTS */
-import { ANIM_LEFT, ANIM_RIGHT, ANIM_TURN } from "./animations";
+import BombPrefab from "./BombPrefab";
 /* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
@@ -104,6 +105,14 @@ export default class Level extends Phaser.Scene {
 		const star_5 = new StarPrefab(this, 1113.209228515625, 434.09173583984375);
 		starsLayer.add(star_5);
 
+		// bombs_layer
+		const bombs_layer = this.add.layer();
+
+		// score_text
+		const score_text = new ScorePrefab(this, 16, 16);
+		this.add.existing(score_text);
+		score_text.setOrigin(0, 0);
+
 		// lists
 		const platforms = [bottomPlatform, platform_Prefab_2, platform_Prefab_1, platform_Prefab];
 
@@ -116,7 +125,16 @@ export default class Level extends Phaser.Scene {
 		// player_star_collider
 		this.physics.add.overlap(player, starsLayer.list, this.collectStar as any, undefined, this);
 
+		// bombs_platform_collider
+		this.physics.add.collider(bombs_layer.list, platforms);
+
+		// player_bombs_collider
+		this.physics.add.collider(player, bombs_layer.list, this.hitBomb as any, undefined, this);
+
 		this.player = player;
+		this.starsLayer = starsLayer;
+		this.bombs_layer = bombs_layer;
+		this.score_text = score_text;
 		this.leftKey = leftKey;
 		this.rightKey = rightKey;
 		this.upKey = upKey;
@@ -126,6 +144,9 @@ export default class Level extends Phaser.Scene {
 	}
 
 	private player!: PlayerPrefab;
+	private starsLayer!: Phaser.GameObjects.Layer;
+	private bombs_layer!: Phaser.GameObjects.Layer;
+	private score_text!: ScorePrefab;
 	private leftKey!: Phaser.Input.Keyboard.Key;
 	private rightKey!: Phaser.Input.Keyboard.Key;
 	private upKey!: Phaser.Input.Keyboard.Key;
@@ -135,6 +156,8 @@ export default class Level extends Phaser.Scene {
 
 	// Write your code here
 
+	private gameOver = false;
+
 	create() {
 
 		this.editorCreate();
@@ -143,9 +166,51 @@ export default class Level extends Phaser.Scene {
 
 	private collectStar(player: PlayerPrefab, star: StarPrefab) {
 		star.collected();
+
+		this.score_text.addScore(10);
+
+		if (this.noStarActive()) {
+			// reset stars
+			for (let obj of this.starsLayer.list) {
+				const star = obj as StarPrefab;
+
+				star.resetStar();
+			}
+
+			const bombX = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+			// spawn bomb
+			const bomb = new BombPrefab(this, bombX, 0);
+			this.bombs_layer.add(bomb);
+		}
+	}
+
+	private hitBomb(player: PlayerPrefab, bomb: BombPrefab) {
+
+		this.physics.pause();
+
+		player.die();
+
+		this.gameOver = true;
+
+	}
+
+	private noStarActive() {
+		for (let star of this.starsLayer.list) {
+			if (star.active) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	update() {
+
+		if (this.gameOver) {
+			return;
+		}
+
 		this.updatePlayer();
 	}
 

@@ -96,6 +96,7 @@
             "type": "Layer",
             "id": "dd34ae06-81e7-475f-8529-178cd1209b39",
             "label": "starsLayer",
+            "scope": "CLASS",
             "list": [
                 {
                     "prefabId": "57d5b093-7c70-4974-a62e-50c43a8c2bfb",
@@ -208,6 +209,28 @@
                     "y": 434.09173583984375
                 }
             ]
+        },
+        {
+            "type": "Layer",
+            "id": "a3c944ee-96f8-4ed0-a9a1-efa116b862ab",
+            "label": "bombs_layer",
+            "scope": "CLASS"
+        },
+        {
+            "prefabId": "2351bc2a-ee19-4c76-a57b-05445d3e2361",
+            "id": "e072f7dd-83f4-483d-b50a-5f060d8362d1",
+            "unlock": [
+                "x",
+                "y",
+                "originX",
+                "originY"
+            ],
+            "label": "score_text",
+            "scope": "CLASS",
+            "x": 16,
+            "y": 16,
+            "originX": 0,
+            "originY": 0
         }
     ],
     "plainObjects": [
@@ -254,6 +277,24 @@
             "object2": "starsLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.collectStar as any",
+            "callbackContext": "this"
+        },
+        {
+            "id": "ba181d0c-45ea-45d7-a74b-88d59f84bede",
+            "type": "Collider",
+            "label": "bombs_platform_collider",
+            "scope": "LOCAL",
+            "object1": "bombs_layer.list",
+            "object2": "platforms"
+        },
+        {
+            "id": "d043ad31-5fc2-483f-a07c-aedd610eae11",
+            "type": "Collider",
+            "label": "player_bombs_collider",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "bombs_layer.list",
+            "collideCallback": "this.hitBomb as any",
             "callbackContext": "this"
         }
     ],
